@@ -28,7 +28,7 @@ setLearner(learner : LearnerImpl) : void</panel_attributes>
     <type>com.umlet.element.Class</type>
     <coordinates>
       <x>550</x>
-      <y>160</y>
+      <y>110</y>
       <w>80</w>
       <h>30</h>
     </coordinates>
@@ -71,12 +71,12 @@ setLearner(learner : LearnerImpl) : void</panel_attributes>
     <type>com.umlet.element.Relation</type>
     <coordinates>
       <x>490</x>
-      <y>160</y>
+      <y>110</y>
       <w>130</w>
-      <h>200</h>
+      <h>250</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>110;30;30;180</additional_attributes>
+    <additional_attributes>110;30;30;230</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.Class</type>
@@ -95,12 +95,12 @@ setLearner(learner : LearnerImpl) : void</panel_attributes>
     <type>com.umlet.element.Relation</type>
     <coordinates>
       <x>590</x>
-      <y>160</y>
+      <y>110</y>
       <w>230</w>
-      <h>200</h>
+      <h>250</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>30;30;210;180</additional_attributes>
+    <additional_attributes>30;30;210;230</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.Relation</type>
@@ -108,21 +108,21 @@ setLearner(learner : LearnerImpl) : void</panel_attributes>
       <x>490</x>
       <y>90</y>
       <w>80</w>
-      <h>100</h>
+      <h>50</h>
     </coordinates>
     <panel_attributes/>
-    <additional_attributes>30;30;60;80</additional_attributes>
+    <additional_attributes>30;30;60;30</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
       <x>520</x>
-      <y>150</y>
+      <y>100</y>
       <w>160</w>
-      <h>80</h>
+      <h>130</h>
     </coordinates>
     <panel_attributes/>
-    <additional_attributes>30;30;140;60</additional_attributes>
+    <additional_attributes>30;30;140;110</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.Class</type>
@@ -395,10 +395,10 @@ learn(propAndConcept : PropertyAndConcept) : void</panel_attributes>
       <x>560</x>
       <y>0</y>
       <w>50</w>
-      <h>180</h>
+      <h>130</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;.</panel_attributes>
-    <additional_attributes>30;30;30;160</additional_attributes>
+    <additional_attributes>30;30;30;110</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.Class</type>
