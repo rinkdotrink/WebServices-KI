@@ -15,35 +15,40 @@ import de.ki.PropertyConverter;
 
 public class PropertyConverterTest {
 
-	PropertyConverter propertyConverter;
-	
-	@BeforeClass
-	public static void setUpBeforeClass() throws Exception {
-	}
+   PropertyConverter propertyConverter;
 
-	@AfterClass
-	public static void tearDownAfterClass() throws Exception {
-	}
+   @BeforeClass
+   public static void setUpBeforeClass()
+      throws Exception {
+   }
 
-	@Before
-	public void setUp() throws Exception {
-		propertyConverter = new PropertyConverter();
-	}
+   @AfterClass
+   public static void tearDownAfterClass()
+      throws Exception {
+   }
 
-	@After
-	public void tearDown() throws Exception {
-	}
+   @Before
+   public void setUp()
+      throws Exception {
+      propertyConverter = new PropertyConverter();
+   }
 
-	@Test
-	public final void getPropertyVectorTest() {
-		String property = "((70,1,2,3,10),Vorfahrt von Rechts)";
-		PropertyAndConcept propertyVectorAndConcept = propertyConverter.getPropertyVector(property);
-		Vector<Integer> propertyVector = propertyVectorAndConcept.getProperty();
-		assertEquals(new Integer(70), propertyVector.get(0));
-		assertEquals(new Integer(1), propertyVector.get(1));
-		assertEquals(new Integer(2), propertyVector.get(2));
-		assertEquals(new Integer(3), propertyVector.get(3));
-		assertEquals(new Integer(10), propertyVector.get(4));
-	}
+   @After
+   public void tearDown()
+      throws Exception {
+   }
+
+   @Test
+   public final void getPropertyVectorTest() {
+      String property = "((70,1,2,3,10),Vorfahrt von Rechts)";
+      PropertyAndConcept propertyVectorAndConcept =
+         propertyConverter.getPropertyVector(property);
+      Vector<Integer> propertyVector = propertyVectorAndConcept.getProperty();
+      assertEquals(new Integer(70), propertyVector.get(0));
+      assertEquals(new Integer(1), propertyVector.get(1));
+      assertEquals(new Integer(2), propertyVector.get(2));
+      assertEquals(new Integer(3), propertyVector.get(3));
+      assertEquals(new Integer(10), propertyVector.get(4));
+   }
 
 }

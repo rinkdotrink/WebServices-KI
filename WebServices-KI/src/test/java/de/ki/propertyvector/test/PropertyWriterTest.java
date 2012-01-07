@@ -20,49 +20,53 @@ import de.ki.propertyvector.writer.PropertyWriter;
 
 public class PropertyWriterTest {
 
-	PropertyWriter propertyWriter;
-	PixelAnalyzer pictureAnalyzer;
-	PictureConverter pictureConverter;
-	
-	
-	@BeforeClass
-	public static void setUpBeforeClass() throws Exception {
-	}
+   PropertyWriter propertyWriter;
+   PixelAnalyzer pictureAnalyzer;
+   PictureConverter pictureConverter;
 
-	@AfterClass
-	public static void tearDownAfterClass() throws Exception {
-	}
+   @BeforeClass
+   public static void setUpBeforeClass()
+      throws Exception {
+   }
 
-	@Before
-	public void setUp() throws Exception {
-		
-		propertyWriter = new PropertyWriter();
-		
-		PictureProperties pictureProperty = new PictureProperties();
-		pictureAnalyzer = new PixelAnalyzer(pictureProperty);
-		pictureConverter = new PictureConverter(pictureAnalyzer);
-	}
+   @AfterClass
+   public static void tearDownAfterClass()
+      throws Exception {
+   }
 
-	@After
-	public void tearDown() throws Exception {
-	}
+   @Before
+   public void setUp()
+      throws Exception {
 
-	@Test
-	public final void test() {
-		File file = new File("X-10Y-10.jpg");
-//		File file = new File("rb.jpg");
-		BufferedImage bufferedImage = null;
-		try {
-			bufferedImage = ImageIO.read(file);
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		
-		pictureAnalyzer = pictureConverter.convertAndAnalyzePixels(bufferedImage);
-		PictureProperties pictureProperties = pictureAnalyzer.getPictureProperties();
-		propertyWriter.writePropertyVector(pictureProperties, "Konzept xy");
-		
-	}
+      propertyWriter = new PropertyWriter();
+
+      PictureProperties pictureProperty = new PictureProperties();
+      pictureAnalyzer = new PixelAnalyzer(pictureProperty);
+      pictureConverter = new PictureConverter(pictureAnalyzer);
+   }
+
+   @After
+   public void tearDown()
+      throws Exception {
+   }
+
+   @Test
+   public final void test() {
+      File file = new File("X-10Y-10.jpg");
+      // File file = new File("rb.jpg");
+      BufferedImage bufferedImage = null;
+      try {
+         bufferedImage = ImageIO.read(file);
+      } catch (IOException e) {
+         // TODO Auto-generated catch block
+         e.printStackTrace();
+      }
+
+      pictureAnalyzer = pictureConverter.convertAndAnalyzePixels(bufferedImage);
+      PictureProperties pictureProperties =
+         pictureAnalyzer.getPictureProperties();
+      propertyWriter.writePropertyVector(pictureProperties, "Konzept xy");
+
+   }
 
 }

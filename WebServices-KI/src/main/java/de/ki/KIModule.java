@@ -1,25 +1,26 @@
 package de.ki;
 
 import com.google.inject.AbstractModule;
-import com.google.inject.Singleton;
 
-import de.ki.learn.Learner;
-import de.ki.learn.evaluater.EvaluaterUtil;
-import de.ki.learn.knn.KNN;
-import de.ki.learn.reader.PropertyReader;
-import de.ki.learn.trainer.Trainer;
-import de.ki.learn.trainer.TrainerUtil;
+import de.ki.server.learn.Learner;
+import de.ki.server.learn.cal2.DecisionTree;
+import de.ki.server.learn.evaluater.EvaluaterUtil;
+import de.ki.server.learn.reader.PropertyReader;
+import de.ki.server.learn.trainer.Trainer;
+import de.ki.server.learn.trainer.TrainerUtil;
 
-public class KIModule extends AbstractModule{
+public class KIModule
+   extends AbstractModule {
 
-    @Override
-    protected void configure() {
-		bind(PropertyReader.class).in(Singleton.class);
-		bind(PropertyConverter.class).in(Singleton.class);
-		bind(Trainer.class).in(Singleton.class);
-		bind(TrainerUtil.class).in(Singleton.class);
-		bind(EvaluaterUtil.class).in(Singleton.class);
-//		bind(Learner.class).to(DecisionTree.class).in(Singleton.class);
-		bind(Learner.class).to(KNN.class).in(Singleton.class);
-    }
+   @Override
+   protected void configure() {
+      bind(PropertyReader.class);
+      bind(PropertyConverter.class);
+      bind(Trainer.class);
+      bind(TrainerUtil.class);
+      bind(EvaluaterUtil.class);
+      bind(Learner.class).to(DecisionTree.class);
+      bind(KI.class);
+//    bind(Learner.class).to(KNN.class);
+   }
 }

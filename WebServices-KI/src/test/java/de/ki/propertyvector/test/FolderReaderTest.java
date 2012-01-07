@@ -11,30 +11,34 @@ import org.junit.Test;
 import de.ki.propertyvector.reader.FolderReader;
 
 public class FolderReaderTest {
-	
-	FolderReader folderReader;
 
-	@BeforeClass
-	public static void setUpBeforeClass() throws Exception {
-	}
+   FolderReader folderReader;
 
-	@AfterClass
-	public static void tearDownAfterClass() throws Exception {
-	}
+   @BeforeClass
+   public static void setUpBeforeClass()
+      throws Exception {
+   }
 
-	@Before
-	public void setUp() throws Exception {
-//		folderReader = new FolderReader();
-	}
+   @AfterClass
+   public static void tearDownAfterClass()
+      throws Exception {
+   }
 
-	@After
-	public void tearDown() throws Exception {
-	}
-//
-//	@Test
-//	public final void test() {
-//		folderReader.readFolder("c:/Verkehrszeichen/102 - Vorfahrt von Rechts/");		
-//		
-//	}
+   @Before
+   public void setUp()
+      throws Exception {
+      // folderReader = new FolderReader();
+   }
+
+   @After
+   public void tearDown()
+      throws Exception {
+   }
+   //
+   // @Test
+   // public final void test() {
+   // folderReader.readFolder("c:/Verkehrszeichen/102 - Vorfahrt von Rechts/");
+   //
+   // }
 
 }

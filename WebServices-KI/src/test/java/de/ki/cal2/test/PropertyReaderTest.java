@@ -9,36 +9,41 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-import de.ki.learn.reader.PropertyReader;
+import de.ki.server.learn.reader.PropertyReader;
 
 public class PropertyReaderTest {
 
-	PropertyReader propertyReader;
-	@BeforeClass
-	public static void setUpBeforeClass() throws Exception {
-	}
+   PropertyReader propertyReader;
 
-	@AfterClass
-	public static void tearDownAfterClass() throws Exception {
-	}
+   @BeforeClass
+   public static void setUpBeforeClass()
+      throws Exception {
+   }
 
-	@Before
-	public void setUp() throws Exception {
-		propertyReader = new PropertyReader();
-	}
+   @AfterClass
+   public static void tearDownAfterClass()
+      throws Exception {
+   }
 
-	@After
-	public void tearDown() throws Exception {
-	}
+   @Before
+   public void setUp()
+      throws Exception {
+      propertyReader = new PropertyReader();
+   }
 
-	@Test
-	public final void testReadProperty() {
-		String propertyExpected = "((90,0,0,0,0),Vorfahrt gewaehren)";
-//		String propertyExpected = "((80,0,0,0,10),Vorfahrt von Rechts)";
-		String propertyActual = propertyReader.readProperties();
-		propertyActual = propertyReader.readProperties();
-		System.out.println(propertyActual);
-		assertTrue(propertyActual.compareTo(propertyExpected) == 0);
-	}
+   @After
+   public void tearDown()
+      throws Exception {
+   }
+
+   @Test
+   public final void testReadProperty() {
+      String propertyExpected = "((90,0,0,0,0),Vorfahrt gewaehren)";
+      // String propertyExpected = "((80,0,0,0,10),Vorfahrt von Rechts)";
+      String propertyActual = propertyReader.readProperties();
+      propertyActual = propertyReader.readProperties();
+      System.out.println(propertyActual);
+      assertTrue(propertyActual.compareTo(propertyExpected) == 0);
+   }
 
 }
